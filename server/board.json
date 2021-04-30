@@ -1,0 +1,60 @@
+{
+  "codes": [
+    {
+      "id": 1,
+      "value": 3,
+      "desc": "Journal"
+    },
+    {
+      "id": 2,
+      "value": "D",
+      "desc": "ToDo"
+    }
+  ],
+  "boards": [
+    {
+      "id": 1,
+      "name": "일기",
+      "insertDate": 1617351293396,
+      "updateDate": 1617351293396,
+      "code": "D"
+    },
+    {
+      "id": 2,
+      "name": "할일",
+      "insertDate": 1617351293396,
+      "updateDate": 1617351293396,
+      "code": "D"
+    }
+  ],
+  "articles": [
+    {
+      "id": 1,
+      "title": "고기 먹은 날",
+      "content": "고기는 갓갓임",
+      "views": 17,
+      "insertDate": 1617351293396,
+      "updateDate": 1619687130172,
+      "boardId": 1
+    },
+    {
+      "id": 2,
+      "title": "치킨 추천하기",
+      "content": "교촌치킨이랑 지코바 중 선택해야 함",
+      "views": 13,
+      "insertDate": 1617351448578,
+      "updateDate": 1619687125816,
+      "boardId": 2
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "content": "내일은 치킨을 먹어야겠다.",
+      "insertDate": 1617351448578,
+      "updateDate": "",
+      "boardId": 2,
+      "articleId": 1
+    }
+  ]
+}
