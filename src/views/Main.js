@@ -1,10 +1,16 @@
-import React from 'react'
+import React from 'react';
+import "./css/Main.css";
 
 function Main() {
     return (
-        <>
-            <div>Welcome!</div>
-        </>
+        <div className="mainWrap">
+            <h3 className="mainTitle">HOME</h3>
+            <div className="mainTxt">
+                I WANT TO GO HOME
+                <br />
+                🚶🏻‍♀️ → 🏢 → 🚟 → 🚠 → 🚶🏻‍♀️ → 🏠🧡
+            </div>
+        </div>
     )
 }
-export default Main
+export default Main;

@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+.listWrap {
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    height: calc(100vh - 250px);
+    overflow-y: auto;
+}
+
+.listTitle {
+    display: inline-block;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #333;
+    padding-right: 50px;
+    padding-bottom: 5px;
+}
+
+.listLinkWrap {
+    margin-bottom: 10px;
+}
+.listLinkWrap::before {
+    content: "•";
+    margin-right: 5px;
+}
+.listLinkWrap:last-child{
+    margin-bottom: 0;
+}
+
+.listLink {
+    text-decoration: none;
+    color: #555;
+}
+.listLink:hover{
+    text-decoration: underline;
+}
+
+.noBoard {
+    color: #aaa;
+}

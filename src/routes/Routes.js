@@ -21,7 +21,7 @@ function Routes() {
                         <Route path={"/article/:articleId"} exact component={Article} />
                         <Route path={"/insert"} exact component={Post} />
                         <Route path={"/update/:articleId"} exact component={Post} />
-                        <Route path={"control"} exact component={Control} />
+                        <Route path={"/control"} exact component={Control} />
                         <Route path={"*"} component={Main} />
                     </Switch>
                 </Suspense>
@@ -30,4 +30,4 @@ function Routes() {
     )
 }
 
-export default Routes
+export default Routes;

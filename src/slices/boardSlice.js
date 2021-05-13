@@ -25,6 +25,26 @@ const reducers = {
         state.status = action.paylaod?.status ?? 500;
         state.statusText = action.payload?.statusText ?? "Network Error";
     },
+
+    // board 조회
+    getBoard: () => {},
+    getBoardSuccess: () => {},
+    getBoardFail: () => {},
+
+    // board 신규 저장
+    postBoard: () => {},
+    postBoardSuccess: () => {},
+    postBoardFail: () => {},
+
+    // board 수정
+    putBoard: () => {},
+    putBoardSuccess: () => {},
+    putBoardFail: () => {},
+
+    // board 삭제
+    deleteBoard: () => {},
+    deleteBoardSuccess: () => {},
+    deleteBoardFail: () => {}
 };
 
 const boardSlice = createSlice({

@@ -10,13 +10,13 @@ const initialState = {
 
 const reducers = {
     // get (조회)
-    getCommonList: () => {},
-    getCommonListSuccess: (state, action) => {
+    getCommentList: () => {},
+    getCommentListSuccess: (state, action) => {
         state.commentList = action.payload?.data ?? [];
         state.status = action.payload?.status;
         state.statusText = action.payload?.statusText ?? "Success";
     },
-    getCommonListFail: (state, action) => {
+    getCommentListFail: (state, action) => {
         state.commentList = initialState.commentList;
         state.status = action.payload?.status ?? 500;
         state.statusText = action.payload?.statusText ?? "Network Error";

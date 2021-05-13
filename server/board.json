@@ -1,60 +1,49 @@
 {
   "codes": [
     {
+      "desc": "Song",
+      "value": "노래",
       "id": 1,
-      "value": 3,
-      "desc": "Journal"
-    },
-    {
-      "id": 2,
-      "value": "D",
-      "desc": "ToDo"
+      "insertDate": 1620865915180,
+      "updateDate": 1620865941882
     }
   ],
   "boards": [
     {
+      "name": "포레스텔라",
+      "code": "노래",
       "id": 1,
-      "name": "일기",
-      "insertDate": 1617351293396,
-      "updateDate": 1617351293396,
-      "code": "D"
-    },
-    {
-      "id": 2,
-      "name": "할일",
-      "insertDate": 1617351293396,
-      "updateDate": 1617351293396,
-      "code": "D"
+      "insertDate": 1620865972008,
+      "updateDate": 1620865972008
     }
   ],
   "articles": [
     {
+      "boardId": "1",
+      "title": "My Eden",
+      "content": "There's a stone for the things forgotten\nJust a stone for all you wanted\nLook a stone for what will not be\nAll you thought was there\n\nCount the stones don't think about him\nLet the stones become your mountain\nLet them go the nights you doubted\nAll those thousand cares\n\nSoftly now thread\nThough the towns and the dark\nSoftly be led\nBy the clouds and the stars\n\nWhen the distances grow\nWhen the winds start to blow\nSomething whispers from afar\nThere's a home in the heart\nAnother heaven\n\nThere's a time for everything\nThere's a song for every dream\nThere's a song\n\nThere's a stone for every action\nFor the things you won't look back on\nLook a stone for all that will be\nAll that still is me\n\nSoftly now thread\nThough the sounds of the dark\nSoftly be led\nBy the clouds and the stars\n\nWhen the distances grow\nwhen the winds start to blow\nSomething whispers from afar\nThere's a home in the heart\nAnother heaven\n\nThere's a time for everything\nThere's a song for every dream\nThere's a world that's yet to be\n\nThere's a time for everything\nThere's a song for every dream\n\nThere's a home in the heart\nThere's a time for everything\nThere's a song for everything\nThere's a world that's yet to be",
       "id": 1,
-      "title": "고기 먹은 날",
-      "content": "고기는 갓갓임",
-      "views": 17,
-      "insertDate": 1617351293396,
-      "updateDate": 1619687130172,
-      "boardId": 1
-    },
-    {
-      "id": 2,
-      "title": "치킨 추천하기",
-      "content": "교촌치킨이랑 지코바 중 선택해야 함",
-      "views": 13,
-      "insertDate": 1617351448578,
-      "updateDate": 1619687125816,
-      "boardId": 2
+      "views": 96,
+      "insertDate": 1620866101146,
+      "updateDate": 1620883970647
     }
   ],
   "comments": [
     {
       "id": 1,
-      "content": "내일은 치킨을 먹어야겠다.",
-      "insertDate": 1617351448578,
-      "updateDate": "",
-      "boardId": 2,
-      "articleId": 1
+      "content": "🎼🎵🎶🎤🎤🎤🎤🎶🎵🎼",
+      "boardId": "1",
+      "articleId": 1,
+      "insertDate": 1620869793011,
+      "updateDate": 1620869793011
+    },
+    {
+      "id": 2,
+      "content": "아주아주 좋아요 :>",
+      "boardId": "1",
+      "articleId": 1,
+      "insertDate": 1620869814643,
+      "updateDate": 1620869814643
     }
   ]
 }

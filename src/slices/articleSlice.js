@@ -42,6 +42,40 @@ const reducers = {
         state.article = initialState.article;
         state.status = action.payload?.status ?? 500;
         state.statusText = action.payload?.statusText ?? "Networt Error";
+    },
+
+    // post
+    postArticle: () => {},
+    postArticleSuccess: () => {},
+    postArticleFail: (state, action) => {
+        state.status = action.payload?.status ?? 500;
+        state.statusText = action.payload?.statusText ?? "Network Error";
+    },
+
+    // modify
+    setArticle: () => {},
+
+    // put
+    putArticle: () => {},
+    putArticleSuccess: (state, action) => {
+        state.article = action.payload;
+        console.log(state.article);
+    },
+    putArticleFail: (state, action) => {
+        state.status = action.payload?.status ?? 500;
+        state.statusText = action.payload?.statusText ?? "Network Error";
+    },
+
+    // delete
+    deleteArticle: () => {},
+    deleteArticleSuccess: (state, action) => {
+        state.article = initialState.article;
+        state.status = action.payload?.status;
+        state.statusText = action.payload?.statusText ?? "Success";
+    },
+    deleteArticleFail: (state, action) => {
+        state.status = action.payload?.status ?? 500;
+        state.statusText = action.payload?.statusText ?? "Network Error";
     }
 };
 

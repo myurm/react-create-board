@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+.commentWrap {
+    width: 100%;
+    margin-bottom: 30px;
+}
+.commentTxt {
+    width: calc(100% - 81px);
+    margin-right: 0;
+    vertical-align: middle;
+    height: 40px;
+    border: 1px solid #ccc;
+    resize: none;
+    border-right: 0;
+    padding: 10px;
+    outline: none;
+}
+.commentBtn {
+    width: 60px;
+    height: 62px;
+    margin-left: 0;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-color: #eaeaea;
+}
+
+.commentTxtWrap {
+    background-color: #fefefe;
+    padding: 10px;
+    border: 1px solid #eaeaea;
+    margin-bottom: 10px;
+}
+.commentTxtWrap:last-child {
+    margin-bottom: 0;
+}
+
+.commentDateDelBtn {
+    width: 100%;
+    display: inline-block;
+}
+.commentDate {
+    float: left;
+    font-size: 12px;
+    color: #888;
+}
+.commentDelBtn {
+    float: right;
+    border: 0;
+    background-color: initial;
+    cursor: pointer;
+    color: #888;
+}
+.commentContent{
+    color: #555;
+}
+
+.noComment {
+    color: #555;
+}
