@@ -16,12 +16,13 @@ function Comment({ articleId }) {
 
     // event
     function onClickInsertCommentButton() {
-        if(newComment.length > 0) {
+        if(newComment.length <= 0 || newComment === " " || newComment === "\n"){
+            alert("댓글을 입력해 주세요.");
+            setNewComment("");
+            return;
+        } else {
             dispatch(commentActions.insertComment(newComment));
             setNewComment("");
-        } else {
-            alert("댓글을 입력해 주세요.");
-            return;
         }
     }
     function onClickDeleteCommentButton(commentId) {
@@ -46,7 +47,7 @@ function Comment({ articleId }) {
                     maxLength="100"
                     placeholder="100자 이내로 작성해 주세요."
                 />
-                <button onClick={onClickInsertCommentButton} className="commentBtn">등록</button>
+                <button onClick={onClickInsertCommentButton} className="commentBtn" >등록</button>
             </div>
             <div className="commentBoard">
                 {

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "json-server --watch board.json --port 2000"
+    "start": "json-server --host 192.168.0.16 board.json --port 2000"
   },
   "keywords": [],
   "author": "",

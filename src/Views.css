@@ -1,19 +1,26 @@
 @charset "utf-8";
 
+@font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+}
+
 * {
     margin: 0;
     padding: 0;
     transition: 0.25s;
-    /* font-size: 14px; */
+    /* font-family: 'NanumBarunGothic', sans-serif; */
 }
 *::-webkit-scrollbar {
-    width: 7px;
-    background-color: #aaaaaa30;
-    border-radius: 50px;
+    width: 5px;
+    background-color: initial;
 }
 *::-webkit-scrollbar-thumb {
-    width: 7px;
-    background-color: #69728388;
+    width: 5px;
+    background-color: #69728370;
     border-radius: 50px;
 }
 ::selection {

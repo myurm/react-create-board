@@ -17,8 +17,9 @@
 }
 
 .commentBoard {
-    height: calc(100vh - 1140px);
+    height: calc(100vh - 900px);
     overflow-y: auto;
+    min-height: 130px;
 }
 .commentBtn {
     width: 60px;
@@ -58,6 +59,7 @@
 }
 .commentContent{
     color: #555;
+    font-size: 14px;
 }
 
 .noComment {

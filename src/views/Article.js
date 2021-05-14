@@ -17,9 +17,12 @@ function Article() {
     const statusText = useSelector((state) => state.articleReducer.statusText);
     const boardList = useSelector((state) => state.boardReducer.boardList);
 
-    console.log(article);
-
     // event
+    function onClickBackButton() {
+        // history.goBack();
+        history.push(`/board/${article?.boardId ?? 0}`)
+    }
+
     function onClickUpdateButton() {
         history.push(`/update/${params?.articleId ?? 0}`);
     }
@@ -61,9 +64,11 @@ function Article() {
                         </div>
                         {/* insertDate가 있으면 new Date().toLocaleString()이 입력되고 없으면 ""로 입력됨 */}
                         {/* Date를 toString()하는 이유는 react에서 Date 형태는 바로 렌더링되지 않기 때문 */}
-                        <span className="articleContent">{article?.content.split("\n").map(line => <span>{line}<br/></span>)}</span>
+                        <span className="articleContent">{article?.content?.split("\n").map(line => <span>{line}<br/></span>)}</span>
                     </div>
                     <div className="articleBtn">
+                        <button onClick={onClickBackButton} className="backBtn">목록</button>
+                        <span className="btnLine"></span>
                         <button onClick={onClickUpdateButton} className="mdfBtn">수정</button>
                         <span className="btnLine"></span>
                         <button onClick={onClickDeleteButton} className="delBtn">삭제</button>

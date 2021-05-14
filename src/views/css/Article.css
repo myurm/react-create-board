@@ -5,12 +5,14 @@
     background-color: #f8f8f8;
     border-radius: 5px;
     height: calc(100vh - 250px);
+    min-height: 600px;
 }
 
 .boardName {
     font-size: 14px;
     color: #aaa;
     margin-bottom: 5px;
+    display: inline-block;
 }
 
 .articleTitle {
@@ -41,8 +43,8 @@
 .articleContent {
     margin-top: 20px;
     display: block;
-    min-height: 400px;
-    height: calc(100vh - 700px);
+    min-height: 200px;
+    height: calc(100vh - 900px);
     overflow-y: auto;
     margin-bottom: 20px;
 }
@@ -51,17 +53,22 @@
 }
 
 .articleBtn {
-    width: 100%;
     margin-bottom: 20px;
-    text-align: right;
+    float: right;
 }
-.mdfBtn, .delBtn {
+
+.backBtn, .mdfBtn, .delBtn {
     border: 0;
     background-color: initial;
     cursor: pointer;
     color: #333;
 }
+.backBtn {
+    margin-right: 10px;
+}
+
 .mdfBtn {
+    margin-left: 10px;
     margin-right: 10px;
 }
 .delBtn {
