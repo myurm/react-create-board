@@ -1,23 +1,34 @@
 @charset "utf-8";
 
-.updateCodeWrap {
+.updateBoardWrap {
     margin-top: 5px;
     margin-bottom: 30px;
 }
 
-.updateCodeInput {
+.updateBaordList {
+    margin-bottom: 20px;
+}
+.updateBaordList:last-child {
+    margin-bottom: 0;
+}
+
+.updateBoardInput, .updateBoardSelect {
     display: block;
     margin-top: 5px;
     margin-bottom: 20px;
     outline: none;
     border: 1px solid #ccc;
 }
-.updateCodeInput {
+.updateBoardInput {
     width: calc(100% - 24px);
     padding: 11px;
 }
+.updateBoardSelect {
+    width: 100%;
+    padding: 10px;
+}
 
-.updateCodeSubmitBtn, .updateCodeDelBtn {
+.updateBoardSubmitBtn, .updateBoardDelBtn {
     border: 0;
     color: #fff;
     padding: 8px 25px;
@@ -25,21 +36,21 @@
     cursor: pointer;
     text-shadow: 0px 0px 1px #555;
 }
-.updateCodeSubmitBtn {
+.updateBoardSubmitBtn {
     float: left;
     background-color: #5bb7ecaf;
 }
-.updateCodeDelBtn {
+.updateBoardDelBtn {
     display: inline-block;
     background-color: #888888af;
     margin-left: 10px;
 }
-.updateCodeSubmitBtn:hover {
+.updateBoardSubmitBtn:hover {
     color: #fff;
     box-shadow: 3px 3px 8px #eee;
     background-color: #5bb7ec;
 }
-.updateCodeDelBtn:hover {
+.updateBoardDelBtn:hover {
     color: #fff;
     box-shadow: 3px 3px 8px #eee;
     background-color: #888888;

@@ -16,8 +16,13 @@ function Comment({ articleId }) {
 
     // event
     function onClickInsertCommentButton() {
-        dispatch(commentActions.insertComment(newComment));
-        setNewComment("");
+        if(newComment.length > 0) {
+            dispatch(commentActions.insertComment(newComment));
+            setNewComment("");
+        } else {
+            alert("댓글을 입력해 주세요.");
+            return;
+        }
     }
     function onClickDeleteCommentButton(commentId) {
         if(!window.confirm("삭제하시겠습니까?")){
@@ -38,10 +43,12 @@ function Comment({ articleId }) {
                     value={newComment}
                     onChange={(e) => setNewComment(e.target.value)}
                     className="commentTxt"
+                    maxLength="100"
+                    placeholder="100자 이내로 작성해 주세요."
                 />
                 <button onClick={onClickInsertCommentButton} className="commentBtn">등록</button>
             </div>
-            <div>
+            <div className="commentBoard">
                 {
                     status === 200 ?
                     commentList.length > 0 ?
@@ -52,12 +59,16 @@ function Comment({ articleId }) {
                                 <button onClick={() => onClickDeleteCommentButton(comment?.id ?? 0)} className="commentDelBtn">⨉</button>
                             </div>
                             <div key={comment?.id ?? index}>
-                                <span className="commentContent">{comment?.content ?? ""}</span>
+                                <span className="commentContent">{comment?.content.split("\n").map(line => <span>{line}<br/></span>)}</span>
                             </div>
                         </div>
                     ))
                     :
-                    <div className="noComment">댓글이 없습니다 :(</div>
+                    <div className="noComment">
+                        댓글이 없습니다.
+                        <br />
+                        가장 먼저 댓글을 작성해 보세요 :&gt;
+                    </div>
                     :
                     <>
                         <div>

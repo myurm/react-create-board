@@ -29,11 +29,11 @@ function CreateCode({setShowCreateCode}) {
         <div className="createCodeWrap">
             <div>
                 <span>코드명</span>
-                <input name="desc" onChange={onChangeCode} value={code?.desc ?? ""} className="createCodeInput" />
+                <input name="desc" onChange={onChangeCode} value={code?.desc ?? ""} className="createCodeInput" autoComplete="off" />
             </div>
             <div>
                 <span>코드 설정값</span>
-                <input name="value" onChange={onChangeCode} value={code?.value ?? ""} className="createCodeInput" />
+                <input name="value" onChange={onChangeCode} value={code?.value ?? ""} className="createCodeInput" autoComplete="off" />
             </div>
             <div>
                 <button onClick={onClickSubmitButton} className="createCodeBtn">등록</button>

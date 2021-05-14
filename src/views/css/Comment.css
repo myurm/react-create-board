@@ -15,6 +15,11 @@
     padding: 10px;
     outline: none;
 }
+
+.commentBoard {
+    height: calc(100vh - 1140px);
+    overflow-y: auto;
+}
 .commentBtn {
     width: 60px;
     height: 62px;

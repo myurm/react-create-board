@@ -43,7 +43,7 @@ function CreateBoard({setShowCreateBoard}) {
                 <>
                     <div>
                         <span>게시판 명</span>
-                        <input name="name" onChange={onChangeArticle} className="createBoardInput"/>
+                        <input name="name" onChange={onChangeArticle} className="createBoardInput" autoComplete="off" />
                     </div>
                     <div>
                         <span>사용 코드</span>

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { boardActions } from "../../slices/boardSlice";
 import { codeActions } from "../../slices/codeSlice";
-import "./css/UpdateCodeList.css";
+import "./css/UpdateBoardList.css";
 
 function UpdateBoardList({ setShowUpdateBoardList }) {
     const dispatch = useDispatch();
@@ -60,7 +60,7 @@ function UpdateBoardList({ setShowUpdateBoardList }) {
                 boardStatus === 200 ?
                 updatedBoardList.length > 0 ?
                 updatedBoardList.map((updatedBoard, index) =>
-                    <>
+                    <div className="updateBaordList">
                         <div>
                             <span>게시판 이름</span>
                             <input
@@ -69,6 +69,7 @@ function UpdateBoardList({ setShowUpdateBoardList }) {
                                 data-index={index}
                                 onChange={onChangeBoard}
                                 className="updateBoardInput"
+                                autoComplete="off"
                             />
                         </div>
                         <div>
@@ -112,7 +113,7 @@ function UpdateBoardList({ setShowUpdateBoardList }) {
                         <div>
                             <button onClick={() => onClickDeleteButton(updatedBoard?.id ?? 0)} className="updateBoardDelBtn">삭제</button>
                         </div>
-                    </>
+                    </div>
                 )
                 :
                 <div>

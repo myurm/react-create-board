@@ -5,7 +5,6 @@
     background-color: #f8f8f8;
     border-radius: 5px;
     height: calc(100vh - 250px);
-    overflow-y: auto;
 }
 
 .boardName {
@@ -41,9 +40,11 @@
 }
 .articleContent {
     margin-top: 20px;
-    margin-bottom: 20px;
     display: block;
     min-height: 400px;
+    height: calc(100vh - 700px);
+    overflow-y: auto;
+    margin-bottom: 20px;
 }
 .articleComment {
     width: 100%;

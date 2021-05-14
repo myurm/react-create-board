@@ -57,10 +57,7 @@ const reducers = {
 
     // put
     putArticle: () => {},
-    putArticleSuccess: (state, action) => {
-        state.article = action.payload;
-        console.log(state.article);
-    },
+    putArticleSuccess: () => {},
     putArticleFail: (state, action) => {
         state.status = action.payload?.status ?? 500;
         state.statusText = action.payload?.statusText ?? "Network Error";

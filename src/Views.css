@@ -4,6 +4,24 @@
     margin: 0;
     padding: 0;
     transition: 0.25s;
+    /* font-size: 14px; */
+}
+*::-webkit-scrollbar {
+    width: 7px;
+    background-color: #aaaaaa30;
+    border-radius: 50px;
+}
+*::-webkit-scrollbar-thumb {
+    width: 7px;
+    background-color: #69728388;
+    border-radius: 50px;
+}
+::selection {
+    background-color: #69728388;
+    color: #fff;
+}
+input, textarea, select {
+    font-size: 14px;
 }
 
 .wrap{

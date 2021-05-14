@@ -82,6 +82,7 @@ function Post() {
                                 onChange={onChangeArticle}
                                 value={article?.title ?? ""}
                                 className="postInput"
+                                autoComplete="off"
                             />
                         </div>
                         <div>

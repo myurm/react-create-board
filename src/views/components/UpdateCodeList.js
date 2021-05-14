@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { codeActions } from "../../slices/codeSlice";
-import "./css/UpdateBoardList.css";
+import "./css/UpdateCodeList.css";
 
 function UpdateCodeList({setShowUpdateCodeList}) {
     const dispatch = useDispatch();
@@ -50,7 +50,7 @@ function UpdateCodeList({setShowUpdateCodeList}) {
                 status === 200 ?
                 updatedCodeList.length > 0 ?
                 updatedCodeList.map((updatedCode, index) =>
-                    <>
+                    <div className="updateCodeList">
                         <div>
                             <span>코드 설명</span>
                             <input
@@ -59,6 +59,7 @@ function UpdateCodeList({setShowUpdateCodeList}) {
                                 data-index={index}
                                 onChange={onChangeCode}
                                 className="updateCodeInput"
+                                autoComplete="off"
                             />
                         </div>
                         <div>
@@ -69,6 +70,7 @@ function UpdateCodeList({setShowUpdateCodeList}) {
                                 data-index={index}
                                 onChange={onChangeCode}
                                 className="updateCodeInput"
+                                autoComplete="off"
                             />
                         </div>
                         <div>
@@ -77,7 +79,7 @@ function UpdateCodeList({setShowUpdateCodeList}) {
                         <div>
                             <button onClick={() => onClickDeleteButton(updatedCode?.id ?? 0)} className="updateCodeDelBtn">삭제</button>
                         </div>
-                    </>
+                    </div>
                 )
                 :
                 <div>

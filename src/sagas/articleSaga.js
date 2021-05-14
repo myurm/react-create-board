@@ -132,13 +132,7 @@ const SECOND = 1000; // retry에서 10 * 1000 이 10초임
                 updateDate: Date.now()
             });
             if(rspn?.status === 200) {
-                const a = rspn?.data?.content;
-                const b = a?.replaceAll(/\n/g, "\\n");
-                const c = JSON.stringify(b);
-
-                console.log(c);
-
-                yield put(articleActions.putArticleSuccess(c));
+                yield put(articleActions.putArticleSuccess());
                 history.push(`/article/${rspn?.data?.id ?? 0}`);
             } else {
                 yield put(articleActions.putArticleFail(rspn));

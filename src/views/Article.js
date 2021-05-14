@@ -61,7 +61,7 @@ function Article() {
                         </div>
                         {/* insertDate가 있으면 new Date().toLocaleString()이 입력되고 없으면 ""로 입력됨 */}
                         {/* Date를 toString()하는 이유는 react에서 Date 형태는 바로 렌더링되지 않기 때문 */}
-                        <span className="articleContent">{article?.content ?? ""}</span>
+                        <span className="articleContent">{article?.content.split("\n").map(line => <span>{line}<br/></span>)}</span>
                     </div>
                     <div className="articleBtn">
                         <button onClick={onClickUpdateButton} className="mdfBtn">수정</button>

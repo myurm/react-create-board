@@ -18,7 +18,7 @@ function Views() {
     return (
         <div className="wrap">
             <div id="header" className="header">
-                <h3>미람 게시판</h3>
+                <h3>미람게시판</h3>
             </div>
             <div className="btnWrap">
                 <button onClick={onClickNewPostButton} className="newBtn">새글</button>
