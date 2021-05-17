@@ -16,7 +16,7 @@ function Comment({ articleId }) {
 
     // event
     function onClickInsertCommentButton() {
-        if(newComment.length <= 0 || newComment === " " || newComment === "\n"){
+        if(newComment.length <= 0 || newComment.trim() === ""){
             alert("댓글을 입력해 주세요.");
             setNewComment("");
             return;

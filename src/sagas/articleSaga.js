@@ -34,7 +34,6 @@ const SECOND = 1000; // retry에서 10 * 1000 이 10초임
     // articleList
     function* asyncGetArticleList(action) {
         try {
-            // const rspn = yield call(apiGetArticleList, {boardId: action.payload} ← 얘와 ↓ 얘와 같음); 
             const rspn = yield retry(3, 10 * SECOND, apiGetArticleList, {boardId: action.payload});
             // retry : 네트워크 요청 재시도에는 적합하지 않은데 네트워크 요청을 재시도
             // retry(시도횟수, 시간, 호출 함수, 호출함수input)
@@ -70,6 +69,7 @@ const SECOND = 1000; // retry에서 10 * 1000 이 10초임
                 views: parseInt(action.payload?.views ?? 0) + 1, // 조회수 추가
                 updateDate: Date.now() // 수정날짜 추가
             });
+            const countCheck = 0;
             if (rspn?.status === 200) {
                 yield put(articleActions.updateArticleViewsSuccess(rspn));
             } else {
